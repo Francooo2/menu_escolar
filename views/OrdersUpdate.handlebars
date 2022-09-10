@@ -1,0 +1,35 @@
+{{> NavBar type='Cerrar Sesión' link='/auth/logout'}}
+
+{{> Modal route='/orders/new'}}
+
+<main>
+    <div class="login">
+        <form class="formUpdate" action="/update/{{data.[0].id}}" method="POST">
+            <h2>Rectificación del pedido {{data.[0].id}} (ordenado el {{data.[0].date}})</h2>
+            <div class="gridForm">
+
+            <label>M. Vegetarianos:</label>
+            <input type="number" name="vegetarian_real" min="0" max="1000" value="{{data.[0].vegetarian_real}}" required
+                autofocus />
+            <p>Ordenó: {{data.[0].vegetarian}}</p>
+            <label>M. Calórico:</label>
+            <input type="number" name="caloric_real" min="0" max="1000" value="{{data.[0].caloric_real}}" required />
+            <p>Ordenó: {{data.[0].caloric}}</p>
+            <label>M. Celiacos:</label>
+            <input type="number" name="celiac_real" min="0" max="1000" value="{{data.[0].celiac_real}}" required />
+            <p>Ordenó: {{data.[0].celiac}}</p>
+            <label>M. Autóctono:</label>
+            <input type="number" name="ethnic_real" min="0" max="1000" value="{{data.[0].ethnic_real}}" required />
+            <p>Ordenó: {{data.[0].ethnic}}</p>
+            <label>M. Standard:</label>
+            <input type="number" name="standard_real" min="0" max="1000" value="{{data.[0].standard_real}}" required />
+            <p>Ordenó: {{data.[0].standard}}</p>
+            </div>
+            <textarea maxlength="1024" name="observations" rows="4" cols="50">
+            </textarea>
+            <button class="buttonForm">Enviar</button>
+
+        </form>
+
+    </div>
+</main>

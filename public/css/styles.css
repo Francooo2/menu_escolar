@@ -5,20 +5,28 @@
 }
 
 :root {
-    --background-color    : hsl(0, 0%, 90%);
+    --background-color: hsl(0, 0%, 90%);
     --background-cardcolor: hsl(0, 0%, 98%);
-    --element-color       : hsl(0, 0%, 35%);
+    --element-color: hsl(0, 0%, 35%);
 }
+
 html {
     height: 100vh;
 }
+
 body {
     background-color: var(--background-color);
     height: 100%;
 }
+
 main {
     height: 90%;
 }
+
+a {
+    text-decoration: none;
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -28,27 +36,33 @@ main {
     font-family: 'Montserrat', sans-serif;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 .nav__link {
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 10px;
     color: black;
 }
+
 .nav__item {
     list-style: none;
 }
+
 .nav__link:hover {
     background-color: var(--background-color);
     transition: all 0.2s;
 }
+
 .login {
     height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
 }
-form {
+
+.formGeneral {
     width: 40%;
     min-width: 280px;
     display: flex;
@@ -61,15 +75,45 @@ form {
     font-family: 'Montserrat', sans-serif;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-h2, p {
+
+.formUpdate {
+    width: 80%;
+    min-width: 280px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    padding: 5em;
+    border-radius: 10px;
+    background-color: var(--background-cardcolor);
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.gridForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+
+}
+textarea {
+    margin: 1em;
+}
+
+h2,
+p {
     margin: 0.8em;
 }
+
 input {
     margin: 0.8em;
     padding: 0.2em;
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
 }
+
 .buttonForm {
     border: none;
     background-color: var(--element-color);
@@ -79,8 +123,110 @@ input {
     margin: 5px;
     cursor: pointer;
 }
+
 .buttonForm:hover {
     outline: 1px solid var(--element-color);
     background-color: var(--background-cardcolor);
     color: var(--element-color);
+}
+
+.windowModal {
+    position: absolute;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.windowModalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 45%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: var(--element-color);
+    background-color: var(--background-cardcolor);
+}
+
+.categories {
+    font-family: 'Montserrat', sans-serif;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 2em;
+}
+
+.buttonOrder {
+    border: none;
+    background-color: var(--element-color);
+    color: var(--background-cardcolor);
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    margin: 25px 5px;
+    cursor: pointer;
+}
+
+.buttonOrder:hover {
+    outline: 1px solid var(--element-color);
+    background-color: var(--background-cardcolor);
+    color: var(--element-color);
+}
+
+.firstSection,
+.secondSection {
+    background-color: var(--background-cardcolor);
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    width: 35%;
+    height: 150px;
+}
+
+.container-table {
+    overflow-x: auto;
+}
+
+table {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-spacing: 0px
+}
+
+td {
+    padding: 10px;
+    width: 180px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    width: 150px;
+    border-bottom: 1px solid #ddd;
+    background-color: var(--element-color);
+    color: var(--background-cardcolor);
+}
+
+.is_rectified {
+    background-color: rgb(193, 247, 207);
+}
+
+.not_rectified {
+    background-color: orange;
 }

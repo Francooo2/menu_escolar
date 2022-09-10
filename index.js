@@ -22,15 +22,9 @@ app.use(express.static(__dirname + '/public'))
 
 app.set('port', 3000)
 
-app.use('/login', (req, res) => {
-    return res.status(200).render('Login')
-})
-app.use('/register', (req, res) => {
-    return res.status(200).render('Register')
-})
-app.use('/', (req, res) => {
-    return res.status(200).render('Home')
-})
+
+app.use('/auth', require('./routes/auth'))
+app.use('/', require('./routes/renders'))
 
 app.listen(app.get('port'), () => {
     console.log(`Servidor corriendo en el puerto ${app.get('port')}`);

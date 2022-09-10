@@ -1,0 +1,17 @@
+{{> NavBar type='Cerrar Sesión' link='/auth/logout'}}
+
+{{> Modal route='/orders/new'}}
+
+<main>
+    <div class="login">
+    <h2>Detalle del pedido {{data.[0].id}} (ordenado el {{data.[0].date}})</h2>
+    <p>Menús Vegetarianos: Se Ordenaron {{data.[0].vegetarian}}, Se consumieron {{data.[0].vegetarian_real}}</p>
+    <p>Menús Vegetarianos: Se Ordenaron {{data.[0].celiac}}, Se consumieron {{data.[0].celiac_real}}</p>
+    <p>Menús Vegetarianos: Se Ordenaron {{data.[0].standard}}, Se consumieron {{data.[0].standard_real}}</p>
+    <p>Menús Vegetarianos: Se Ordenaron {{data.[0].caloric}}, Se consumieron {{data.[0].caloric_real}}</p>
+    <p>Menús Vegetarianos: Se Ordenaron {{data.[0].ethnic}}, Se consumieron {{data.[0].ethnic_real}}</p>
+    <p>Se pidieron en total: {{data.[0].total}}</p>
+    <a class="buttonOrder" href="/">Volver al Inicio</a>
+
+    </div>
+</main>

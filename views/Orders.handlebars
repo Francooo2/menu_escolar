@@ -1,0 +1,26 @@
+{{> NavBar type='Cerrar Sesión' link='/auth/logout'}}
+
+{{> Modal route='/orders/new'}}
+
+<main>
+    <div class="login">
+        <form class="formUpdate" action="/orders/new" method="POST">
+            <h2>Nuevo Pedido</h2>
+
+            <label>M. Vegetarianos</label>
+            <input type="number" name="vegetarian" min="0" max="1000" required autofocus />
+            <label>M. Calórico</label>
+            <input type="number" name="caloric" min="0" max="1000" required />
+            <label>M. Celiacos</label>
+            <input type="number" name="celiac" min="0" max="1000" required />
+            <label>M. Autóctono</label>
+            <input type="number" name="ethnic" min="0" max="1000" required />
+            <label>M. Standard</label>
+            <input type="number" name="standard" min="0" max="1000" required />
+            <input type="Date" name="date">  
+
+            <button class="buttonForm">Enviar</button>
+        </form>
+
+    </div>
+</main>

@@ -1,5 +1,9 @@
 <nav class="nav">
-    <h1>Menu Escolar</h1>
+    {{#if user}}
+        <h1>Hola {{user.name}}</h1>
+    {{else}}
+        <h1>Menu Junaeb</h1>
+    {{/if}}
     <ul>
         <li class="nav__item">
             <a class="nav__link" href="{{link}}">{{type}}</a>

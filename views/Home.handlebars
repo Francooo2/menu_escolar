@@ -1,1 +1,60 @@
-<h1>Home</h1>
+{{> NavBar type='Cerrar Sesión' link='/auth/logout'}}
+
+<main>
+    <section class="categories">
+        <div class="firstSection">
+            <p>M1: Menú Vegetariano</p>
+            <p>M2: Menú Celiaco</p>
+            <p>M3: Menú Estándar</p>
+        </div>
+        <div class="secondSection">
+            <p>M4: Menú Calórico</p>
+            <p>M5: Menú Autóctono</p>
+        </div>
+        <a class="buttonOrder" href="/orders/new">Nueva Orden</a>
+    </section>
+    <section class="container-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Liceo</th>
+                    <th>M1</th>
+                    <th>M2</th>
+                    <th>M3</th>
+                    <th>M4</th>
+                    <th>M5</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                {{#if is_rectified}}
+                <tr class="is_rectified">
+                    <td>{{date}}</td>
+                    <td>{{school}}</td>
+                    <td>{{vegetarian_real}}</td>
+                    <td>{{celiac_real}}</td>
+                    <td>{{standard_real}}</td>
+                    <td>{{caloric_real}}</td>
+                    <td>{{ethnic_real}}</td>
+                    <td><a class="buttonOrder" href="/update/{{id}}">Rectificar</a></td>
+                </tr>
+                {{else}}
+                <tr class="not_rectified">
+                    <td>{{date}}</td>
+                    <td>{{school}}</td>
+                    <td>{{vegetarian_real}}</td>
+                    <td>{{celiac_real}}</td>
+                    <td>{{standard_real}}</td>
+                    <td>{{caloric_real}}</td>
+                    <td>{{ethnic_real}}</td>
+                    <td><a class="buttonOrder" href="/detail/{{id}}">Ver detalle</a></td>
+                </tr>
+                {{/if}}
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+</main>
