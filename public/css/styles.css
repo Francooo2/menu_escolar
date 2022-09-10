@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color    : hsl(0, 0%, 90%);
+    --background-cardcolor: hsl(0, 0%, 98%);
+    --element-color       : hsl(0, 0%, 35%);
+}
+html {
+    height: 100vh;
+}
+body {
+    background-color: var(--background-color);
+    height: 100%;
+}
+main {
+    height: 90%;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-cardcolor);
+    padding: 1em 3em;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.nav__link {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    color: black;
+}
+.nav__item {
+    list-style: none;
+}
+.nav__link:hover {
+    background-color: var(--background-color);
+    transition: all 0.2s;
+}
+.login {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form {
+    width: 40%;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em 0;
+    border-radius: 10px;
+    background-color: var(--background-cardcolor);
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+h2, p {
+    margin: 0.8em;
+}
+input {
+    margin: 0.8em;
+    padding: 0.2em;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+.buttonForm {
+    border: none;
+    background-color: var(--element-color);
+    color: var(--background-cardcolor);
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+.buttonForm:hover {
+    outline: 1px solid var(--element-color);
+    background-color: var(--background-cardcolor);
+    color: var(--element-color);
+}

@@ -1,0 +1,27 @@
+{{> NavBar type='Inicio Sesión' link='/login'}}
+
+{{> Modal route='/register'}}
+
+<main>
+    <div class="login">
+        <form action="/auth/register" method="POST">
+            <h2>Registro</h2>
+
+            <label>Nombre</label>
+            <input type="text" name="name" autofocus />
+            
+            <label>Email</label>
+            <input type="email" name="email" autofocus />
+
+            <label>Password</label>
+            <input type="password" name="password" />
+
+            <label>Confirm Password</label>
+            <input type="password" name="password" />
+
+            <button class="buttonForm">Enviar</button>
+            <p>¿Ya tiene cuenta? <a href="/login">Inicio Sesión</a></p>
+        </form>
+
+    </div>
+</main>
